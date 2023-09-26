@@ -63,7 +63,7 @@ describe('fibonacci', () => {
     })
 
     test('newFibonacciArray', () => {
-        expect(allFunctions.nextNumOfFibonacci([1, 2, 3, 5, 8])).toBe([1, 2, 3, 5, 8, 13])
+        expect(allFunctions.nextNumOfFibonacci([1, 2, 3, 5, 8])).toBe(13)
     })
 })
 

@@ -63,14 +63,14 @@ const fetchUserData = async (userId: number) => {
     return userData.data 
 }
 
-const nextNumOfFibonacci = async (fibonachi: number[]) => {
+const nextNumOfFibonacci = (fibonachi: number[]):string | number => {
     if (fibonachi.length < 3) return 'is not a min array'
     for (let i = 2; i < fibonachi.length; i++) {
-        if (fibonachi[i] !== fibonachi[i - 1] && fibonachi[i - 2])
+        if (fibonachi[i] !== fibonachi[i - 1] + fibonachi[i - 2])
             return 'is not fibonachi array'
     }
-    const newFibonacci = fibonachi.push(fibonachi[-1] + fibonachi[-2])
-    return newFibonacci
+    const nextNum:number = fibonachi[fibonachi.length - 1] + fibonachi[fibonachi.length - 2]
+    return nextNum
 }
 
 const allFunctions = {
